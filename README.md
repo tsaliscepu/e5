@@ -1,59 +1,59 @@
-# 新版本正在开发中......完成后此仓库不再进行维护。
-# E5续订程序
-此项目为该网址的源代码(后端) https://e5.qyi.io/
-(前端) https://github.com/luoye663/e5-html
-#### 使用教程
+# Versi baru dalam pengembangan......Repositori ini tidak akan dipertahankan jika telah selesai。
+# Prosedur Perpanjangan E5
+Proyek ini merupakan kode sumber (back-end) dari URL ini https://e5.qyi.io/
+(Front-end) https://github.com/luoye663/e5-html
+#### Tutorial
 https://qyi.io/archives/687.html
 
-#### 计划:
-- [ ] 基础数据使用轻量级的h2存储
-- [x] 日志使用 TDengine/influxdb 存储
-- [ ] 去除mysql依赖
+#### Rencana:
+- [ ] Data dasar disimpan menggunakan h2 ringan
+- [x] Log yang tersimpan menggunakan TDengine/influxdb
+- [ ] Menghilangkan dependensi mysql
 - 
 ### 2021-08-19
-1、取消启动清空redis  
-2、将调用日志放到influx，减轻mysql压力
+1、Membatalkan pengosongan otomatis pada redis  
+2、Menaruh log panggilan pada influx，untuk mengurangi beban pada mysql
 ### 2021-07-28
-去除rabbitMQ依赖，使用线程池实现更简单(执行时间颗粒度降低)
+Menghilangkan dependensi rabbitMQ，Implementasi lebih sederhana menggunakan thread pool(Mengurangi Waktu eksekusi)
 
 ### 2020-12-20
-前端框架更改为Angular,同时支持多应用，每个账户最多支持5个应用。
-## 说明
-此项目为我的新手练手作，代码辣鸡，目前已经从2020年3月运行到至今。  
-如果要自己搭建的话得自己研究下了，不提供技术支持(懒)，记得修改配置文件 
+Framework front-end diubah menjadi Angular, yang mendukung banyak aplikasi sekaligus, dan setiap akun mendukung hingga 5 aplikasi.。
+## Penjelasan
+Proyek ini merupakan awal saya untuk berlatih，hot chicken code，telah berjalan sejak Maret 2020 hingga kini。  
+Jika anda ingin membangunnya sendiri lakukan riset sendiri，tidak dukukang teknis(malas)，Ingat untuk mengubah berkas konfigurasi 
 src/main/resources/application-online.properties 
 ```
-user.admin.githubId  - 自己的github id  
-数据库配置  
-redis配置  
-Rabbit配置  
+user.admin.githubId  - memiliki github id  
+Pengaturan basis data  
+Pengaturn redis  
+Pengaturan Rabbit  
 github.client_id  
 github.client_secret  
-(这两个在https://github.com/settings/developers 申请一个apps就行了。)
+(Keduanya terdapat pada https://github.com/settings/developers cukup ajukan sebuah apps。)
 ```
-## 注意事项
+## Tindakan Pencegahan
 
 
-## 用到技术或框架
+## Gunakan teknologi framework
 ### spring boot  
 
 ### Redis
-默认用1库，可自行在配置文件修改  
+1 library digunakan secara default，anda dapat mengubahnya pada berkas konfigurasi  
 
 ### Mysql
-自行导入sql  
-没有写清空日志功能，后面加上。  
-按道理说日志因该存到MongoDB里，所以？
+impor sendiri berkas sql  
+Tidak ada fungsi tulis hapus log, diikuti dengan penambahan。  
+Terdapat alasan mengapa log disimpan di MongoDB，jadi？
 ### Mybatis Plus
 
 ### Spring Security
-权限配置由于就那么几个，所以就没写到mysql里面。
+Dikarenakan hanya ada sedikit pengaturan izin，hal itu tidak ditulis di dalam mysql。
 ### log4j2
-日志框架
+Pencatatan Framework
 
-## 鸣谢
+## Terimakasih
 
-> [IntelliJ IDEA](https://www.jetbrains.com/zh-cn/idea/buy/#personal?billing=yearly) 是一个在各个方面都最大程度地提高开发人员的生产力的 IDE，适用于 JVM 平台语言。
+> [IntelliJ IDEA](https://www.jetbrains.com/zh-cn/idea/buy/#personal?billing=yearly) merupakan sebuah IDE yang memaksimalkan produktifitas pengembang di setiap waktu，untuk platrofm JVM。
 
-特别感谢 [JetBrains](https://www.jetbrains.com/?from=) 为开源项目提供免费的 [IntelliJ IDEA](https://www.jetbrains.com/idea/?from=) 等 IDE 的授权  
+Terimakasih kepada [JetBrains](https://www.jetbrains.com/?from=) Gratis untuk proyek sumber terbuka [IntelliJ IDEA](https://www.jetbrains.com/idea/?from=) Menunggu otorisasi IDE 
 [<img src=".github/jetbrains-variant-3.png" width="200"/>](https://www.jetbrains.com/)
